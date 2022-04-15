@@ -14,6 +14,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+     <div id="preloader" onload="myloader()">
+  <div class="loader"></div>
+  </div>
     <!--header front section-->
     <div class="container">
       <i onclick="topFunction()" class="fa fa-arrow-circle-up fa-2x" id="myBtn"></i>
@@ -378,6 +381,10 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+    function myloader(){
+    document.getElementById("preloader").style.display='none';
+};
+setTimeout(myloader, 3000);
 </script>
 <script src="particles.js"></script>
 <script src="app.js"></script>
