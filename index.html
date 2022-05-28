@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0"/>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="contact.css">
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./contact.css">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500&family=Shippori+Antique&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-     <div id="preloader" onload="myloader()">
-  <div class="loader"></div>
+  <div id="preloader" onload="myloader()">
+  <div class="loader"><span></span></div>
   </div>
     <!--header front section-->
+    
     <div class="container">
       <i onclick="topFunction()" class="fa fa-arrow-circle-up fa-2x" id="myBtn"></i>
     <section id="tab1">
@@ -84,7 +88,7 @@
     </div>  
     </div>
 
-<div class="about-box">
+<div class="about-box" data-aos="slide-up">
 <div class="image"><img src="./images/sushant2.jpeg" alt="">
 </div>
 <div class="text2">
@@ -118,7 +122,7 @@
                             <div class="skills2 page">
                              
                     <div class="skill-box">
-             <div class="skill-card">
+             <div class="skill-card" data-aos="slide-up">
         <div class="heading-card">
                 Web Development
                 </div>
@@ -132,7 +136,7 @@
         </ul>
         </div>
              </div>
-             <div class="skill-card">
+             <div class="skill-card" data-aos="slide-up">
               <div class="heading-card"> CS Fundamentals</div>
                 <div class="card-list">
                     <ul>
@@ -143,7 +147,7 @@
                     </ul>
                     </div>
                      </div>
-                     <div class="skill-card">
+                     <div class="skill-card" data-aos="slide-up">
                         <div class="heading-card">Languages</div>
                 <div class="card-list">
                     <ul>
@@ -177,7 +181,7 @@
    <div class="darker"></div>
  
     
-    <div class="project-card"> 
+    <div class="project-card" data-aos="slide-up"> 
 
       <div class="project-image">
         <img src="./images/project1.png" alt="">
@@ -196,7 +200,7 @@
     <a href="https://github.com/Phod-Denge/PlantZone" target="_blank"><i class="fa fa-github fa-2x"></i></a>
     </div>
     </div>
-    <div class="project-card"> 
+    <div class="project-card" data-aos="slide-up"> 
 
       <div class="project-image">
         <img src="./images/project2.png" alt="">
@@ -228,13 +232,13 @@
  
       </div>  
       </div>
-    <div class="container2">
+    <div class="container2" data-aos="slide-left">
  
         <div class="form">
           <div class="contact-info">
             <h3 class="title">Let's get in touch</h3>
             <p class="text">
-              You can also write suggestions and feedbacks to our community and help us to improve. Lets  make this initiative grow together with the help and support of people who care about this world.
+             Hey! lets Connect and share some knowledge,with each other if you need some help do message me , or if you have some suggestions to improve my portfolio do message me
             </p>
     
             <div class="info">
@@ -248,7 +252,7 @@
               </div>
               <div class="information">
                 <i class="fa fa-phone fa-2x infoicon"></i>
-                <p>123-456-789</p>
+            <p>+91 6239725202</p>
               </div>
             </div>
     
@@ -280,8 +284,9 @@
               action="index.html"
               autocomplete="off"
               id="contact"
+              enctype = "multipart/form-data"
             >
-              <h3 class="title">Contact us</h3>
+              <h3 class="title">Contact Me</h3>
               <div class="input-container">
                 <input
                   type="text"
@@ -324,7 +329,7 @@
                 type="button"
                 class="btn"
                 value="Send Email"
-                onclick="sendEmail()"
+                onclick="sendMail()"
               />
             </form>
           </div>
@@ -335,8 +340,8 @@
                 </div>
           
                 </div>
-                <script src="./main.js"></script>
-                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            
+                
 <script>
   function myFunction2() {
     var x = document.getElementById("myLinks");
@@ -347,12 +352,7 @@
       x.style.display = "block";
     }
   }
-AOS.init({
-  disable: function() {
-    var maxWidth = 800;
-    return window.innerWidth < maxWidth;
-  }
-});
+
 
 function myFunction() {
    var element = document.body;
@@ -381,12 +381,22 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-    function myloader(){
+
+
+function myloader(){
     document.getElementById("preloader").style.display='none';
 };
 setTimeout(myloader, 3000);
 </script>
 <script src="particles.js"></script>
 <script src="app.js"></script>
+<script src="main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration:1000,
+    offset:200,
+  });
+</script>
 </body>
 </html>
