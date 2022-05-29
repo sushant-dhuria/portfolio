@@ -15,6 +15,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
 <body>
   <div id="preloader" onload="myloader()">
@@ -78,6 +79,7 @@
 <div id="particles-js">
 
   <div class="aboutcontainer">
+    
       <div class="arrow">        <a href="#basepageid" class="underline"><i class="fa fa-arrow-circle-left"></i></a></div>
 
     <div class="navigation-about">
@@ -87,17 +89,18 @@
         <a href="#contactid" class="underline2">Contact</a>
     </div>  
     </div>
-
-<div class="about-box" data-aos="slide-up">
-<div class="image"><img src="./images/sushant2.jpeg" alt="">
-</div>
-<div class="text2">
-    <h2>I'am a sophomore of Information Technology in NIT Jalandhar. I am a Full Stack Web Developer, a CS enthusiast and like to explore new technologies that would potentially change the world.</h2>
-</div>
-<div class="btn-black">
-    <a href="./13725420_Sushant_Dhuria_21724729_202204120442_Resume.pdf"  download="sushant Resume">Download Resume</a>
-</div>
-</div>
+  <hr class="new5">
+    <div class="about-box" data-aos="slide-up">
+      <div class="image"><img src="./images/sushant2.jpeg" alt="">
+      </div>
+      <div class="text2">
+          <h2>I'am a sophomore of Information Technology in NIT Jalandhar. I am a Full Stack Web Developer, a CS enthusiast and like to explore new technologies that would potentially change the world.</h2>
+      </div>
+      <div class="btn-black">
+          <a href="./13725420_Sushant_Dhuria_21724729_202204120442_Resume.pdf"  download="sushant Resume">Download Resume</a>
+      </div>
+      </div>
+     
 <div class="icons icons-about"> 
     <i class="fa fa-facebook-square"></i>
 <i class="fa fa-instagram"></i>
@@ -329,14 +332,14 @@
                 type="button"
                 class="btn"
                 value="Send Email"
-                onclick="sendMail()"
+                onclick="sendEmail()"
               />
             </form>
           </div>
         </div>
       </div>
 </section>
-                
+              
                 </div>
           
                 </div>
@@ -387,6 +390,27 @@ function myloader(){
     document.getElementById("preloader").style.display='none';
 };
 setTimeout(myloader, 3000);
+</script>
+<script src=
+"https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script type="text/javascript">
+  const email=document.getElementById("email").innerText;
+function sendEmail() {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "email",
+    To: 'sushantdhuria123@gmail.com',
+    From: "email",
+    Subject: "Sending Email using javascript",
+    Body: "Well that was easy!!",
+  })
+    .then(function (message) {
+      alert("mail sent successfully")
+    });
+    document.getElementById("contact").reset();
+}
 </script>
 <script src="particles.js"></script>
 <script src="app.js"></script>
